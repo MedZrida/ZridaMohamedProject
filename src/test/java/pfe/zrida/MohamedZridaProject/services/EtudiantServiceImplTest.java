@@ -93,10 +93,10 @@ class EtudiantServiceImplTest {
         assertNotNull(ajoutEtudiant2);
         assertNotNull(ajoutEtudiant3);
 
-        System.err.println("Étape 1 : Ajout de trois étudiants");
-        System.err.println(ajoutEtudiant1);
-        System.err.println(ajoutEtudiant2);
-        System.err.println(ajoutEtudiant3);
+        System.out.println("Étape 1 : Ajout de trois étudiants");
+        System.out.println(ajoutEtudiant1);
+        System.out.println(ajoutEtudiant2);
+        System.out.println(ajoutEtudiant3);
     }
 
 
@@ -115,8 +115,8 @@ class EtudiantServiceImplTest {
         // Assertion pour vérifier que le nom de l'étudiant a été modifié
         assertEquals("Nouveau Nom Étudiant 1", modifEtudiant1.getNomE());
 
-        System.err.println("Étape 2 : Modification de l'étudiant 1");
-        System.err.println(modifEtudiant1);
+        System.out.println("Étape 2 : Modification de l'étudiant 1");
+        System.out.println(modifEtudiant1);
     }
 
     @Test
@@ -134,8 +134,8 @@ class EtudiantServiceImplTest {
         // Assertion pour vérifier que l'étudiant récupéré est le même que celui ajouté
         assertEquals(ajoutEtudiant1, etudiant1Retrouve);
 
-        System.err.println("Étape 3 : Récupération de l'étudiant 1");
-        System.err.println(etudiant1Retrouve);
+        System.out.println("Étape 3 : Récupération de l'étudiant 1");
+        System.out.println(etudiant1Retrouve);
     }
 
     @Test
@@ -154,7 +154,7 @@ class EtudiantServiceImplTest {
         // Assertion pour vérifier que l'étudiant 2 a bien été supprimé
         verify(etudiantRepository, times(1)).delete(ajoutEtudiant2);
 
-        System.err.println("Étape 4 : Suppression de l'étudiant 2 ");
+        System.out.println("Étape 4 : Suppression de l'étudiant 2 ");
 
     }
 
@@ -169,7 +169,7 @@ class EtudiantServiceImplTest {
 
         // Assurez-vous que le département a été créé avec succès et n'est pas null
         assertNotNull(departement);
-        System.err.println("Étape 5 : Création d'un nouveau département : " + departement);
+        System.out.println("Étape 5 : Création d'un nouveau département : " + departement);
     }
 
     @Test
@@ -197,9 +197,9 @@ class EtudiantServiceImplTest {
         // Assertion pour vérifier que l'étudiant a bien été affecté au département
         assertEquals(ajoutEtudiant3.getDepartement(),departement);
 
-        System.err.println("Étape 6 : Affectation de l'étudiant " + ajoutEtudiant3.getNomE() + " au département " + departement.getNomDepart());
-        System.err.println(departement);
-        System.err.println(ajoutEtudiant3);
+        System.out.println("Étape 6 : Affectation de l'étudiant " + ajoutEtudiant3.getNomE() + " au département " + departement.getNomDepart());
+        System.out.println(departement);
+        System.out.println(ajoutEtudiant3);
 
     }
 
@@ -216,8 +216,8 @@ class EtudiantServiceImplTest {
         // Assertion pour vérifier que l'équipe a été créée avec succès et n'est pas null
         assertNotNull(equipe);
 
-        System.err.println("Étape 7 : Création d'une équipe");
-        System.err.println(equipe);
+        System.out.println("Étape 7 : Création d'une équipe");
+        System.out.println(equipe);
     }
 
     @Test
@@ -231,8 +231,8 @@ class EtudiantServiceImplTest {
         // Assertion pour vérifier que le contrat a été créé avec succès et n'est pas null
         assertNotNull(contrat);
 
-        System.err.println("Étape 8 : Création d'un contrat");
-        System.err.println(contrat);
+        System.out.println("Étape 8 : Création d'un contrat");
+        System.out.println(contrat);
     }
 
     @Test
@@ -265,8 +265,8 @@ class EtudiantServiceImplTest {
         assertTrue(equipe.getEtudiants().contains(etudiantAffecte)); // Vérifie que l'étudiant est associé à l'équipe
         assertEquals(contrat.getEtudiant(), etudiantAffecte);
 
-        System.err.println("Étape 9 : Ajout de l'étudiant " + etudiant.getNomE() + " avec affectation à une équipe et un contrat ");
-        System.err.println("<============================ Fin du scénario de test ============================>");
+        System.out.println("Étape 9 : Ajout de l'étudiant " + etudiant.getNomE() + " avec affectation à une équipe et un contrat ");
+        System.out.println("<============================ Fin du scénario de test ============================>");
 
     }
 }
