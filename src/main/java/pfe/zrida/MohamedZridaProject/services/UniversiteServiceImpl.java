@@ -27,7 +27,7 @@ public class UniversiteServiceImpl implements IUniversiteService {
         return (List<Universite>) universiteRepository.findAll();
     }
 
-    @Transactional
+
     public Universite addUniversite(Universite u) {
         return (universiteRepository.save(u));
     }

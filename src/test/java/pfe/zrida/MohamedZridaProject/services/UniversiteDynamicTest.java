@@ -43,7 +43,6 @@ public class UniversiteDynamicTest {
     }
 
     @Test
-    @Transactional
     public void testUniversityServiceScenario() {
         // Step 1: Add a University
         Universite newUniversity = new Universite();
