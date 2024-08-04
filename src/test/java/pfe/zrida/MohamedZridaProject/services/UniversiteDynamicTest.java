@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 import pfe.zrida.MohamedZridaProject.entities.Departement;
 import pfe.zrida.MohamedZridaProject.entities.Universite;
 import pfe.zrida.MohamedZridaProject.repositories.DepartementRepository;
@@ -42,6 +43,7 @@ public class UniversiteDynamicTest {
     }
 
     @Test
+    @Transactional
     public void testUniversityServiceScenario() {
         // Step 1: Add a University
         Universite newUniversity = new Universite();
