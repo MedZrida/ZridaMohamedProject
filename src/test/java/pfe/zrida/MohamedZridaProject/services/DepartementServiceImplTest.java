@@ -25,10 +25,8 @@ import pfe.zrida.MohamedZridaProject.repositories.EtudiantRepository;
 
 class DepartementServiceImplTest {
 
-    //@Autowired
     @InjectMocks
     private DepartementServiceImpl departementService;
-    // @Autowired
     @Mock
     private DepartementRepository departementRepository;
     @BeforeEach
